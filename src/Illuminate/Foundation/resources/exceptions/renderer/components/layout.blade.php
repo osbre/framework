@@ -21,6 +21,12 @@
     {!! Renderer::css() !!}
 
     <style>
+        .hljs-ln-code {
+            display: inline-flex;
+            width: 100%;
+            flex-grow: 1;
+        }
+
         @foreach ($exception->frames() as $frame)
             #frame-{{ $loop->index }} .hljs-ln-line[data-line-number='{{ $frame->line() }}'] {
                 background-color: rgba(242, 95, 95, 0.4);
